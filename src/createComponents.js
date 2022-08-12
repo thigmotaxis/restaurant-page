@@ -1,7 +1,7 @@
 export function createElement(tag, classes, parent) {
-  const el = document.createElement(tag)
+  const element = document.createElement(tag)
   for(let i = 0; i < classes.length; i++) {
-    el.classList.add(classes)
+    element.classList.add(classes)
   }
   parent.appendChild(element)
   return element
