@@ -2,7 +2,13 @@ import {createElement} from "./createComponents.js";
 
 
 export function renderMenu() {
+
   const content = document.querySelector(".content");
+// REMOVE ANY EXISTING CONTENT BEFORE RENDERING TAB CONTENTS
+  while(content.firstElementChild) {
+    content.removeChild(content.firstElementChild)
+  }
+// RENDER TAB CONTENT
   const menuList = createElement("ul", ["menu"], content);
   const menuItems = ["hass", "reed", "pinkerton", "espresso", "bowl"];
   const menuItemDescriptions =
