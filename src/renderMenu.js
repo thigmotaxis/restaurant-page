@@ -12,7 +12,7 @@ export function renderMenu() {
   const menuList = createElement("ul", ["menu"], content);
   const menuItems = ["hass", "reed", "pinkerton", "espresso", "bowl"];
   const menuItemDescriptions =
-  [`Our hass specialty! Ok, but we actually just made the ice cream from a basic avocado like you could get at any grocery store. We poured some espreso on it for you, but you probably could have made this yourself.`,
+  [`Our hass specialty! Ok, but we actually just made the ice cream from a basic avocado like you could get at any grocery store. We poured some espresso on it for you, but you probably could have made this yourself.`,
   `Look at this round boy! He is a majestic beast, but we have tamed him and rendered him into a creamy beverage for you. Surrender to decadence!`,
   `For the discerning weirdo. Warning: ordering this long fellow may get you added to a federal watchlist.`,
   `For those who prefer a quick jolt of stimulant to the long-term cardiovascular health benefits provided by omega 3 fatty acids`,
