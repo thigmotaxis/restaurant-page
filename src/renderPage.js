@@ -1,5 +1,6 @@
 import {createElement} from "./createComponents.js";
-import {renderMenu} from "./renderMenu.js"
+import {renderMenu} from "./renderMenu.js";
+import {renderAbout} from "./renderAbout.js";
 
 const body = document.querySelector("body");
 
@@ -12,12 +13,11 @@ export function renderPage() {
 // REPLACE PLACEHOLDERS IN TABFUNCTIONS ARRAY WITH RENDER FUNCTION REFERENCES
   const tabContainer = document.querySelector(".tabs");
   const tabs = ["menu", "about", "contact"];
-  const tabFunctions = [renderMenu, "renderAbout placeholder", "renderContact placeholder"];
+  const tabFunctions = [renderMenu, renderAbout, "renderContact placeholder"];
   for (let i = 0; i < tabs.length; i++) {
     const element = createElement("div", "tab", tabContainer);
     element.innerHTML = tabs[i].slice(0, 1).toUpperCase() + tabs[i].slice(1);
     element.setAttribute("id", tabs[i])
     element.addEventListener("click", () => tabFunctions[i]())
   };
-
 };
