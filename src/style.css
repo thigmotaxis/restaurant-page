@@ -66,7 +66,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  grid-column-gap: 60px;
 }
 
 .content {
@@ -78,10 +77,15 @@ body {
   place-items: center;
 }
 
-.menu {
+.menu, .about {
   background-color: rgba(255, 133, 58, .95);
   width: 75vw;
   height: 100%;
   display: grid;
   line-height: 1.5;
+}
+
+.testy {
+  width: 500px;
+  height: 500px;
 }
