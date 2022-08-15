@@ -8,7 +8,7 @@ export function renderPage() {
   const sections = ["title", "tabs", "content"];
   for (let i = 0; i < sections.length; i++) {
     const element = createElement("div", sections[i], body);
-    if (i === 0) element.innerHTML = "Abe's Avocados and Affogato"
+    if (i === 0) element.innerHTML = "Abe's Avocado Affogato"
   };
 // REPLACE PLACEHOLDERS IN TABFUNCTIONS ARRAY WITH RENDER FUNCTION REFERENCES
   const tabContainer = document.querySelector(".tabs");
