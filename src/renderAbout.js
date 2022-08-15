@@ -7,9 +7,9 @@ export function renderAbout() {
   while(content.firstElementChild) {
     content.removeChild(content.firstElementChild)
   };
-
+// RENDER TAB CONTENT
   const about = createElement("div", ["about"], content)
-  const header = createElement("h3", ["about"], about)
+  const header = createElement("h3", ["aboutUs"], about)
   header.innerHTML = "Our Story"
   const pOne = createElement("p", ["paragraph"], about)
   pOne.innerHTML =
