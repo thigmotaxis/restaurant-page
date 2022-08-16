@@ -9,10 +9,12 @@ export function renderAbout() {
   };
 // RENDER TAB CONTENT
   const about = createElement("div", ["about"], content)
-  const header = createElement("h3", ["aboutUs"], about)
+  const aboutContainer = createElement("div", ["aboutContainer"], about)
+  const header = createElement("h3", ["header"], aboutContainer)
   header.innerHTML = "Our Story"
-  const pOne = createElement("p", ["paragraph"], about)
-  pOne.innerHTML =
+
+  const paragraph = createElement("p", ["paragraph"], aboutContainer)
+  paragraph.innerHTML =
   `&#8195 &#8195 The story of AAA begins in 1982 when its founder and self-described "Master of the Seas" Mackenzie Burgess inherited an industrial grade
   fruit pulper and thirty four tons of rock salt from her strangest uncle. The following decades brought great fame and enormous success, but with material
   wealth came eccentricity, decadence, and paranoia. In 2021, following a well-publicized and widely misunderstood relationship with the fruit pulper, MOTS
@@ -23,11 +25,13 @@ export function renderAbout() {
   <br></br>
   All hail Abe! All hail The Work!`
 
+  const imageContainer = createElement("div", ["imageContainer"], aboutContainer);
   const founders = new Image();
   founders.src = founder;
-  about.appendChild(founders);
+  founders.classList.add("founderPhoto")
+  imageContainer.appendChild(founders);
 
-  const caption = createElement("p", ["caption"], about);
+  const caption = createElement("p", ["caption"], imageContainer);
   caption.innerHTML = "Our formerly fearless former leader in her former element"
 };
 

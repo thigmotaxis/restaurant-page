@@ -15,7 +15,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/* border: 0; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -45,7 +45,10 @@ table {
 }
 
 /* END MEYER RESET */
-
+* {
+	box-sizing: border-box;
+	/* border: solid red 1px; */
+}
 body {
   height: 100vh;
   display: grid;
@@ -70,22 +73,68 @@ body {
 
 .content {
   background-image: url(./images/affoAvo.png);
+  background-color: rgba(255, 133, 8, .95);
   background-position: center;
   background-size: cover;
   width: 100vw;
-  display: grid;
-  place-items: center;
 }
 
-.menu, .about {
-  background-color: rgba(255, 133, 58, .95);
-  width: 75vw;
-  height: 100%;
-  display: grid;
-  line-height: 1.5;
+.menu, .about, .contact {
+  background-color: rgba(255, 133, 8, .95);
+  width: 100vw;
+	height: 100%;
+	display: grid;
+	place-items: center;
 }
 
-.testy {
-  width: 500px;
-  height: 500px;
+.aboutContainer {
+	display: grid;
+	grid-template-rows: 1fr 3fr 3fr;
+	grid-template-areas:
+	"header"
+	"paragraph"
+	"image";
+	width: 60vw;
+	height: 100%;
+	line-height: 1.5;
+	border: 1px solid white;
+}
+
+.header {
+  grid-area: header;
+	padding: 20px;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.paragraph {
+	grid-area: paragraph;
+	padding: 20px;
+	text-align: justify;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.imageContainer {
+	justify-self: center;
+	grid-area: image;
+}
+
+.founderPhoto {
+	width: 600px;
+}
+
+.contact {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "header header"
+  "content content"
+  "content content"
+  "content content"
+  "content content";
+}
+
+.contactContent {
+  place-self: start;
+  width: 50vw;
 }
