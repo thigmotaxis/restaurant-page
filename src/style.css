@@ -53,14 +53,20 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 1fr 8fr;
+	grid-template-areas:
+	"title"
+	"tabs"
+	"content";
 }
 
 .title {
   font-size: 3rem;
   place-self: center;
+	grid-area: title;
 }
 
 .tabs {
+	grid-area: tabs;
   font-size: 1.5rem;
   border: solid black 1px;
   place-self: center;
@@ -72,6 +78,7 @@ body {
 }
 
 .content {
+	grid-area: content;
   background-image: url(./images/affoAvo.png);
   background-color: rgba(255, 133, 8, .95);
   background-position: center;
@@ -88,12 +95,8 @@ body {
 }
 
 .aboutContainer {
-	display: grid;
-	grid-template-rows: 1fr 3fr 3fr;
-	grid-template-areas:
-	"header"
-	"paragraph"
-	"image";
+	display: flex;
+	flex-direction: column;
 	width: 60vw;
 	height: 100%;
 	line-height: 1.5;
@@ -101,14 +104,12 @@ body {
 }
 
 .header {
-  grid-area: header;
 	padding: 20px;
 	font-size: 1.5rem;
 	font-weight: 700;
 }
 
 .paragraph {
-	grid-area: paragraph;
 	padding: 20px;
 	text-align: justify;
 	margin-top: 10px;
@@ -116,12 +117,13 @@ body {
 }
 
 .imageContainer {
-	justify-self: center;
-	grid-area: image;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .founderPhoto {
-	width: 600px;
+	width: 70%;
 }
 
 .contact {
