@@ -62,4 +62,11 @@ table {
 
 .imageContainer {
   grid-area: image;
+  display: grid;
+  place-self: center;
+  /* height: 25%; */
+}
+
+.founderPhoto {
+  height: 70%;
 }
